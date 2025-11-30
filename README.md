@@ -1,186 +1,427 @@
-# FitTrack - Fitness Tracking App
+# MyFitness - Complete Fitness Tracking Application
 
-A complete, production-ready fitness tracking application built with React Native (Expo), featuring workout tracking, BMI calculation, water intake monitoring, and comprehensive progress analytics.
+A modern, feature-rich fitness tracking mobile application built with React Native and Expo. Track your workouts, monitor water intake, calculate BMI, and maintain your fitness journey with comprehensive progress analytics.
 
-## 🚀 Features
+## 🌟 Features
 
-- **Onboarding Flow**: Personalized user profile setup
-- **Home Dashboard**: Daily progress summary with quick actions
-- **Workout Library**: 10+ predefined workouts across 5 categories
-- **Workout Tracking**: Timer, exercise progression, and completion tracking
-- **History**: Complete workout history with date/time tracking
-- **Profile Management**: Edit user info and view comprehensive stats
-- **BMI Calculator**: Calculate and track BMI with color-coded results
-- **Water Tracker**: Daily water intake monitoring with auto-reset
-- **Progress Analytics**: Streak tracking, total workouts, calories burned
+### 🏠 **Home Dashboard**
 
-## 📱 Tech Stack
+- Personalized greeting with time-based messages
+- Today's progress overview (workouts, water intake, streak)
+- Quick action buttons for instant access
+- Motivational quotes to keep you inspired
+- Real-time statistics display
 
-- **Framework**: React Native (Expo)
-- **Language**: JavaScript
-- **Navigation**: React Navigation (Stack + Bottom Tabs)
-- **Storage**: AsyncStorage (local data persistence)
-- **Styling**: NativeWind/Tailwind CSS
-- **UI Components**: Expo Vector Icons, Expo Linear Gradient
+### 💪 **Workout Management**
 
-## 📁 Project Structure
+- **10+ Predefined Workouts** across multiple categories
+- **Interactive Workout Timer** with pause/resume functionality
+- **Category Filtering**: Full Body, Abs, Chest & Arms, Legs, Yoga
+- **Difficulty Levels**: Beginner, Intermediate, Advanced
+- **Exercise Details** with duration and calorie information
+- **Workout Completion Tracking** with timestamps
 
-```
-MYFITNESS/
-├── App.js                      # Main app entry point
-├── app.json                    # Expo configuration
-├── package.json                # Dependencies
-├── babel.config.js             # Babel configuration
-├── tailwind.config.js          # Tailwind configuration
-├── assets/                     # Images and icons
-├── components/                 # Reusable components
-│   ├── CustomButton.js
-│   ├── CustomInput.js
-│   ├── Header.js
-│   ├── WorkoutCard.js
-│   ├── HistoryCard.js
-│   └── StatCard.js
-├── constants/                  # Theme and constants
-│   └── theme.js
-├── data/                       # Static data
-│   └── workouts.json
-├── hooks/                      # Custom hooks
-│   ├── useProfile.js
-│   ├── useWorkoutHistory.js
-│   ├── useWaterTracker.js
-│   └── useBMI.js
-├── navigation/                 # Navigation setup
-│   ├── AppNavigator.js
-│   └── BottomTabNavigator.js
-├── screens/                    # App screens
-│   ├── OnboardingScreen.js
-│   ├── HomeScreen.js
-│   ├── WorkoutsScreen.js
-│   ├── WorkoutDetailsScreen.js
-│   ├── HistoryScreen.js
-│   ├── ProfileScreen.js
-│   ├── BMICalculatorScreen.js
-│   └── WaterTrackerScreen.js
-└── utils/                      # Utility functions
-    ├── storage.js
-    └── calculations.js
-```
+### 📊 **Progress Tracking**
 
-## 🛠️ Installation
+- **Workout History** with detailed logs
+- **Streak Tracking** (current and longest streaks)
+- **Calorie Tracking** across all workouts
+- **BMI Calculator** with color-coded health categories
+- **Water Intake Monitor** with daily goals (8 glasses/day)
+- **Statistical Analytics** for long-term progress
 
-1. **Install dependencies**:
+### 👤 **Profile Management**
+
+- **Complete User Profile** (name, age, weight, height)
+- **Editable Profile Information** with form validation
+- **Progress Statistics** overview
+- **BMI Integration** with latest calculations
+- **Logout Functionality** with data clearing option
+
+### 🎨 **Modern UI/UX**
+
+- **Warm Color Palette** (Orange, Gold, Sky Blue themes)
+- **Gradient Backgrounds** for enhanced visual appeal
+- **Card-Based Design** with shadows and animations
+- **Responsive Layout** for different screen sizes
+- **Intuitive Navigation** with bottom tabs
+
+## 🛠️ Technology Stack
+
+- **Framework**: React Native with Expo SDK
+- **Language**: JavaScript (ES6+)
+- **Navigation**: React Navigation v6 (Stack + Bottom Tabs)
+- **Storage**: AsyncStorage for local data persistence
+- **Styling**: Custom theme system with gradients
+- **Icons**: Expo Vector Icons (Ionicons)
+- **Components**: Custom reusable component library
+
+## 📱 Installation & Setup
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI (`npm install -g @expo/cli`)
+- Expo Go app on your mobile device
+
+### Quick Start
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/harshitydv1/myFitness.git
+   cd myFitness
+   ```
+
+2. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
-2. **Start the development server**:
+3. **Start the development server**:
+
    ```bash
+   npm start
+   # or
    npx expo start
    ```
 
-3. **Run on your device**:
-   - Scan the QR code with Expo Go app (iOS/Android)
-   - Press `i` for iOS simulator
-   - Press `a` for Android emulator
+4. **Run on your device**:
+   - **Mobile**: Scan QR code with Expo Go app
+   - **iOS Simulator**: Press `i` in terminal
+   - **Android Emulator**: Press `a` in terminal
 
-## 📊 Data Storage
+## 📁 Project Architecture
 
-All data is stored locally using AsyncStorage:
-- **User Profile**: Name, age, weight, height
-- **Workout History**: Completed workouts with timestamps
-- **Water Intake**: Daily water consumption (auto-resets)
-- **BMI Results**: BMI calculation history
+```
+myFitness/
+├── 📱 App.js                   # Main application entry point
+├── ⚙️ app.json                 # Expo configuration
+├── 📦 package.json             # Dependencies and scripts
+├── 🔧 babel.config.js          # Babel transpiler config
+├── 🎨 tailwind.config.js       # Tailwind CSS configuration
+├── 🚀 start.sh                 # Quick start script
+│
+├── 🖼️ assets/                  # Static assets
+│
+├── 🧩 components/              # Reusable UI components
+│   ├── CustomButton.js         # Styled button component
+│   ├── CustomInput.js          # Form input component
+│   ├── Header.js               # Screen header component
+│   ├── WorkoutCard.js          # Workout display card
+│   ├── HistoryCard.js          # History item display
+│   └── StatCard.js             # Statistics display card
+│
+├── 🎯 constants/               # App-wide constants
+│   └── theme.js                # Color themes and styling
+│
+├── 📊 data/                    # Static data files
+│   └── workouts.json           # Predefined workout library
+│
+├── 🎣 hooks/                   # Custom React hooks
+│   ├── useProfile.js           # User profile management
+│   ├── useWorkoutHistory.js    # Workout tracking logic
+│   ├── useWaterTracker.js      # Water intake tracking
+│   ├── useBMI.js               # BMI calculations
+│   └── useLocalStorage.js      # Storage utilities
+│
+├── 🧭 navigation/              # Navigation configuration
+│   ├── AppNavigator.js         # Main navigation stack
+│   └── BottomTabNavigator.js   # Bottom tab navigation
+│
+├── 📱 screens/                 # Application screens
+│   ├── OnboardingScreen.js     # User setup flow
+│   ├── HomeScreen.js           # Dashboard/home screen
+│   ├── WorkoutsScreen.js       # Workout library
+│   ├── WorkoutDetailsScreen.js # Individual workout view
+│   ├── HistoryScreen.js        # Workout history
+│   ├── ProfileScreen.js        # User profile & settings
+│   ├── BMICalculatorScreen.js  # BMI calculation tool
+│   └── WaterTrackerScreen.js   # Water intake tracker
+│
+└── 🛠️ utils/                   # Utility functions
+    ├── storage.js              # AsyncStorage helpers
+    └── calculations.js         # Math & date utilities
+```
 
-## 🎨 Design Features
+## 🎯 Core Features Deep Dive
 
-- Modern gradient backgrounds
-- Smooth animations
-- Card-based UI with shadows
-- Color-coded categories and stats
-- Responsive layout
-- Clean, intuitive navigation
+### 🏃‍♂️ **Workout System**
 
-## 📝 Workout Categories
+- **Categories**: Full Body, Abs, Chest & Arms, Legs, Yoga
+- **Difficulty Levels**: Color-coded (Beginner: Green, Intermediate: Orange, Advanced: Red)
+- **Timer Functionality**: Built-in workout timer with pause/resume
+- **Progress Tracking**: Automatic completion logging with timestamps
+- **Calorie Estimation**: Estimated calories burned per workout
 
-1. **Full Body** - Complete body workouts
-2. **Abs** - Core strengthening exercises
-3. **Chest & Arms** - Upper body workouts
-4. **Legs** - Lower body exercises
-5. **Yoga** - Flexibility and mindfulness
+### 📈 **Analytics & Progress**
 
-## 🏆 Features Breakdown
+- **Streak Tracking**: Current and longest workout streaks
+- **Historical Data**: Complete workout history with date/time
+- **Statistics**: Total workouts, calories burned, consistency metrics
+- **BMI Monitoring**: Track BMI changes over time
+- **Water Goals**: Daily hydration tracking (8 glasses target)
 
-### Onboarding
-- User profile creation
-- Input validation
-- Smooth gradient design
+### 🎨 **Design System**
 
-### Home Screen
-- Personalized greeting
-- Today's progress summary
-- Quick action buttons
-- Motivational quotes
-- Stats overview
+- **Color Palette**: Warm orange (#E2852E), Gold (#F0C674), Sky Blue (#87CEEB)
+- **Typography**: System fonts with consistent sizing scale
+- **Components**: Reusable, themed components with gradient backgrounds
+- **Spacing**: Consistent spacing system (4, 8, 16, 24, 32, 48px)
+- **Shadows**: Subtle shadow system for depth
 
-### Workouts
-- Category filtering
-- 10 predefined workouts
-- Detailed exercise instructions
-- Workout timer
-- Completion tracking
+## 💾 Data Management
 
-### History
-- Chronological workout list
-- Date/time display
-- Clear history option
-- Empty state handling
+### Storage Architecture
 
-### Profile
-- User information display
-- Edit profile functionality
-- Comprehensive stats (workouts, calories, streaks)
-- BMI integration
+All data is stored locally using AsyncStorage with the following keys:
 
-### BMI Calculator
-- Weight/height inputs
-- Real-time calculation
-- Color-coded results
-- Category reference guide
+- `@fittrack_user_profile`: User information (name, age, weight, height)
+- `@fittrack_workout_history`: Array of completed workouts
+- `@fittrack_water_intake`: Daily water consumption data
+- `@fittrack_bmi_results`: BMI calculation history
+- `@fittrack_last_water_date`: Last water tracking date for auto-reset
 
-### Water Tracker
-- Visual intake display
-- Progress bar
-- Glass counter (8 glasses goal)
-- Daily auto-reset
-- Hydration tips
+### Data Structure Examples
 
-## 🔄 State Management
+```javascript
+// User Profile
+{
+  name: "John Doe",
+  age: 25,
+  weight: 70,
+  height: 175
+}
 
-Custom hooks for data management:
-- `useProfile`: User profile CRUD operations
-- `useWorkoutHistory`: Workout tracking and stats
-- `useWaterTracker`: Water intake with daily reset
-- `useBMI`: BMI calculation and history
+// Workout History Entry
+{
+  id: "uuid",
+  workoutId: "workout_1",
+  name: "Full Body HIIT",
+  duration: 30,
+  calories: 300,
+  date: "2025-11-30T10:30:00Z",
+  difficulty: "Intermediate"
+}
 
-## 🎯 Future Enhancements
+// Water Intake
+{
+  glasses: 6,
+  lastUpdate: "2025-11-30",
+  goal: 8
+}
+```
 
-- Custom workout creation
-- Exercise images/GIFs
-- Dark mode toggle
-- Workout reminders
-- Export data functionality
-- Social sharing
-- Achievement badges
-- Step counter integration (Expo Pedometer)
+## 🔧 Development Guide
+
+### Available Scripts
+
+```bash
+# Start development server
+npm start
+
+# Start with specific platform
+npm run android
+npm run ios
+npm run web
+
+# Build for production
+npm run build
+
+# Clear cache and restart
+npm run clear-cache
+```
+
+### Adding New Workouts
+
+1. Edit `data/workouts.json`
+2. Follow existing structure:
+
+```javascript
+{
+  "id": "unique_id",
+  "name": "Workout Name",
+  "description": "Brief description",
+  "duration": 30,
+  "calories": 250,
+  "difficulty": "Beginner|Intermediate|Advanced",
+  "category": "Full Body|Abs|Chest & Arms|Legs|Yoga",
+  "image": "🏃‍♂️",
+  "exercises": [...]
+}
+```
+
+### Customizing Theme
+
+Update `constants/theme.js` to modify colors, spacing, or typography:
+
+```javascript
+export const COLORS = {
+  primary: "#E2852E", // Main orange
+  secondary: "#F0C674", // Gold
+  info: "#87CEEB", // Sky blue
+  // ... other colors
+};
+```
+
+## 🚀 Deployment
+
+### Building for Production
+
+1. **Expo Build Service**:
+
+   ```bash
+   expo build:android
+   expo build:ios
+   ```
+
+2. **Local Builds** (Expo CLI v6+):
+   ```bash
+   npx expo run:android --variant release
+   npx expo run:ios --configuration Release
+   ```
+
+### App Store Preparation
+
+- Update `app.json` with proper metadata
+- Prepare app icons and splash screens
+- Test on physical devices
+- Review platform-specific guidelines
+
+## 📝 API Reference
+
+### Custom Hooks
+
+#### `useProfile()`
+
+```javascript
+const {
+  profile, // Current user profile
+  loading, // Loading state
+  saveProfile, // Save new profile
+  updateProfile, // Update existing profile
+  hasProfile, // Check if profile exists
+  logout, // Clear all data and logout
+  reload, // Reload profile from storage
+} = useProfile();
+```
+
+#### `useWorkoutHistory()`
+
+```javascript
+const {
+  history, // Array of workout history
+  addWorkout, // Add new workout
+  clearHistory, // Clear all history
+  getStats, // Get workout statistics
+} = useWorkoutHistory();
+```
+
+#### `useWaterTracker()`
+
+```javascript
+const {
+  waterIntake, // Current glasses consumed
+  addGlass, // Add one glass
+  removeGlass, // Remove one glass
+  dailyGoal, // Daily goal (8 glasses)
+  percentage, // Progress percentage
+} = useWaterTracker();
+```
+
+#### `useBMI()`
+
+```javascript
+const {
+  bmiHistory, // Array of BMI calculations
+  addBMI, // Add new BMI calculation
+  getLatestBMI, // Get most recent BMI
+  clearHistory, // Clear BMI history
+} = useBMI();
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Metro bundler issues**:
+
+   ```bash
+   npx expo start --clear
+   ```
+
+2. **AsyncStorage errors**:
+
+   - Clear app data or reinstall on device
+   - Check for storage quota limits
+
+3. **Navigation issues**:
+
+   - Ensure proper screen registration
+   - Check navigation stack structure
+
+4. **Build errors**:
+   - Update Expo CLI: `npm install -g @expo/cli`
+   - Clear node_modules: `rm -rf node_modules && npm install`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+### Code Style
+
+- Use ESLint and Prettier for code formatting
+- Follow React Native best practices
+- Write descriptive commit messages
+- Add comments for complex logic
+
+## 🔮 Future Roadmap
+
+### Planned Features
+
+- [ ] **Custom Workouts**: Create and save personal workout routines
+- [ ] **Exercise Library**: Detailed exercise database with instructions
+- [ ] **Progress Photos**: Before/after photo tracking
+- [ ] **Social Features**: Share achievements with friends
+- [ ] **Workout Reminders**: Push notifications for scheduled workouts
+- [ ] **Dark Mode**: Alternative dark theme option
+- [ ] **Data Export**: Export workout data to CSV/PDF
+- [ ] **Wearable Integration**: Apple Health/Google Fit sync
+- [ ] **Premium Features**: Advanced analytics and insights
+
+### Technical Improvements
+
+- [ ] **Offline Mode**: Full offline functionality
+- [ ] **Performance**: Optimize for larger datasets
+- [ ] **Testing**: Unit and integration test coverage
+- [ ] **CI/CD**: Automated build and deployment
+- [ ] **Error Tracking**: Crash reporting and analytics
 
 ## 📄 License
 
-This project is open source and available for personal and educational use.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Development
+## 🙏 Acknowledgments
 
-Built with ❤️ using React Native and Expo.
+- **Expo Team** for the amazing development platform
+- **React Native Community** for continuous improvements
+- **Fitness Enthusiasts** who inspired this application
+- **Open Source Contributors** making mobile development accessible
+
+## 📞 Contact
+
+- **Developer**: Harshit
+- **GitHub**: [@harshitydv1](https://github.com/harshitydv1)
+- **Repository**: [MyFitness](https://github.com/harshitydv1/myFitness)
 
 ---
 
-**Note**: This is a frontend-only application. All data is stored locally on the device using AsyncStorage.
+**Built with ❤️ and lots of ☕ using React Native & Expo**
+
+> "Pain is temporary, but pride is forever." - Jason Smith

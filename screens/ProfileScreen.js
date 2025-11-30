@@ -27,7 +27,7 @@ import {
 } from "../constants/theme";
 
 const ProfileScreen = () => {
-  const { profile, updateProfile } = useProfile();
+  const { profile, updateProfile, logout } = useProfile();
   const { getStats } = useWorkoutHistory();
   const { getLatestBMI } = useBMI();
 
@@ -67,6 +67,29 @@ const ProfileScreen = () => {
       height: profile?.height?.toString() || "",
     });
     setEditMode(false);
+  };
+
+  const handleLogout = () => {
+    Alert.alert(
+      "Logout",
+      "Are you sure you want to logout? This will clear all your data.",
+      [
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+        {
+          text: "Logout",
+          style: "destructive",
+          onPress: async () => {
+            const success = await logout();
+            if (!success) {
+              Alert.alert("Error", "Failed to logout. Please try again.");
+            }
+          },
+        },
+      ]
+    );
   };
 
   return (
@@ -156,6 +179,30 @@ const ProfileScreen = () => {
                 </View>
               </>
             )}
+          </View>
+        </View>
+
+        {/* Settings Section */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Settings</Text>
+          <View style={styles.settingsCard}>
+            <TouchableOpacity
+              style={styles.logoutButton}
+              onPress={handleLogout}
+              activeOpacity={0.7}
+            >
+              <View style={styles.logoutContent}>
+                <Ionicons
+                  name="log-out-outline"
+                  size={24}
+                  color={COLORS.danger}
+                />
+                <Text style={styles.logoutText}>Logout</Text>
+              </View>
+              <Text style={styles.logoutSubtext}>
+                Clear all data and return to setup
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -332,6 +379,31 @@ const styles = StyleSheet.create({
   modalContent: {
     flex: 1,
     padding: SPACING.lg,
+  },
+  settingsCard: {
+    backgroundColor: "#ffffff",
+    borderRadius: BORDER_RADIUS.lg,
+    padding: SPACING.lg,
+    ...SHADOWS.sm,
+  },
+  logoutButton: {
+    paddingVertical: SPACING.sm,
+  },
+  logoutContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: SPACING.sm,
+    marginBottom: 4,
+  },
+  logoutText: {
+    fontSize: FONT_SIZES.base,
+    fontWeight: "600",
+    color: COLORS.danger,
+  },
+  logoutSubtext: {
+    fontSize: FONT_SIZES.sm,
+    color: COLORS.light.textSecondary,
+    marginLeft: 32,
   },
 });
 

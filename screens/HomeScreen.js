@@ -128,9 +128,9 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.quoteCard}>
           <Text style={styles.quoteIcon}>💡</Text>
           <Text style={styles.quoteText}>
-            "The only bad workout is the one that didn't happen."
+            "Pain is temporary, but pride is forever."
           </Text>
-          <Text style={styles.quoteAuthor}>- Unknown</Text>
+          <Text style={styles.quoteAuthor}>- Jason Smith</Text>
         </View>
 
         {/* Stats Overview */}
