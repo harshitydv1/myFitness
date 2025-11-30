@@ -1,0 +1,437 @@
+[
+    {
+        "id": "1",
+        "name": "Full Body Blast",
+        "category": "Full Body",
+        "duration": 30,
+        "calories": 250,
+        "difficulty": "Intermediate",
+        "image": "💪",
+        "description": "A complete full-body workout targeting all major muscle groups",
+        "exercises": [
+            {
+                "name": "Jumping Jacks",
+                "reps": "30",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Stand with feet together, jump while spreading legs and raising arms overhead"
+            },
+            {
+                "name": "Push-ups",
+                "reps": "15",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Keep body straight, lower chest to ground, push back up"
+            },
+            {
+                "name": "Squats",
+                "reps": "20",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Feet shoulder-width apart, lower hips back and down, keep chest up"
+            },
+            {
+                "name": "Plank",
+                "reps": "45 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Hold body straight in push-up position, engage core"
+            },
+            {
+                "name": "Lunges",
+                "reps": "12 each leg",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Step forward, lower back knee toward ground, alternate legs"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Core Crusher",
+        "category": "Abs",
+        "duration": 20,
+        "calories": 150,
+        "difficulty": "Beginner",
+        "image": "🔥",
+        "description": "Intense ab workout to build core strength and definition",
+        "exercises": [
+            {
+                "name": "Crunches",
+                "reps": "25",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Lie on back, hands behind head, lift shoulders off ground"
+            },
+            {
+                "name": "Bicycle Crunches",
+                "reps": "20",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Alternate bringing opposite elbow to knee in cycling motion"
+            },
+            {
+                "name": "Russian Twists",
+                "reps": "30",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Sit with knees bent, lean back slightly, twist torso side to side"
+            },
+            {
+                "name": "Leg Raises",
+                "reps": "15",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Lie flat, raise legs to 90 degrees, lower slowly without touching ground"
+            },
+            {
+                "name": "Mountain Climbers",
+                "reps": "30 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Plank position, alternate bringing knees to chest quickly"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Upper Body Power",
+        "category": "Chest & Arms",
+        "duration": 25,
+        "calories": 200,
+        "difficulty": "Intermediate",
+        "image": "💪",
+        "description": "Build strength in chest, shoulders, and arms",
+        "exercises": [
+            {
+                "name": "Diamond Push-ups",
+                "reps": "12",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Hands close together forming diamond shape, focus on triceps"
+            },
+            {
+                "name": "Tricep Dips",
+                "reps": "15",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Use chair or bench, lower body by bending elbows"
+            },
+            {
+                "name": "Pike Push-ups",
+                "reps": "10",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Hips high in air, lower head toward ground, targets shoulders"
+            },
+            {
+                "name": "Arm Circles",
+                "reps": "30 sec each direction",
+                "sets": 2,
+                "rest": 20,
+                "instructions": "Arms extended, make small circles, gradually increase size"
+            },
+            {
+                "name": "Plank to Push-up",
+                "reps": "10",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Start in plank, push up to hands, return to elbows"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Leg Day Burner",
+        "category": "Legs",
+        "duration": 30,
+        "calories": 280,
+        "difficulty": "Advanced",
+        "image": "🦵",
+        "description": "Intense lower body workout for strong, toned legs",
+        "exercises": [
+            {
+                "name": "Jump Squats",
+                "reps": "15",
+                "sets": 4,
+                "rest": 45,
+                "instructions": "Squat down, explode up into a jump, land softly"
+            },
+            {
+                "name": "Bulgarian Split Squats",
+                "reps": "12 each leg",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Back foot elevated, lower into lunge position"
+            },
+            {
+                "name": "Calf Raises",
+                "reps": "25",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Rise up on toes, hold briefly, lower slowly"
+            },
+            {
+                "name": "Wall Sit",
+                "reps": "60 sec",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Back against wall, slide down to 90-degree angle, hold"
+            },
+            {
+                "name": "Glute Bridges",
+                "reps": "20",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Lie on back, lift hips up, squeeze glutes at top"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Morning Yoga Flow",
+        "category": "Yoga",
+        "duration": 20,
+        "calories": 100,
+        "difficulty": "Beginner",
+        "image": "🧘",
+        "description": "Gentle yoga flow to energize your morning",
+        "exercises": [
+            {
+                "name": "Sun Salutation",
+                "reps": "5 rounds",
+                "sets": 1,
+                "rest": 0,
+                "instructions": "Flow through mountain, forward fold, plank, cobra, downward dog"
+            },
+            {
+                "name": "Warrior II",
+                "reps": "30 sec each side",
+                "sets": 2,
+                "rest": 15,
+                "instructions": "Wide stance, front knee bent, arms extended, gaze over front hand"
+            },
+            {
+                "name": "Tree Pose",
+                "reps": "45 sec each side",
+                "sets": 1,
+                "rest": 15,
+                "instructions": "Balance on one leg, other foot on inner thigh, hands in prayer"
+            },
+            {
+                "name": "Child's Pose",
+                "reps": "60 sec",
+                "sets": 1,
+                "rest": 0,
+                "instructions": "Knees wide, sit back on heels, arms extended forward"
+            },
+            {
+                "name": "Cat-Cow Stretch",
+                "reps": "10 rounds",
+                "sets": 1,
+                "rest": 0,
+                "instructions": "On hands and knees, alternate arching and rounding spine"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Six Pack Abs",
+        "category": "Abs",
+        "duration": 15,
+        "calories": 120,
+        "difficulty": "Intermediate",
+        "image": "🔥",
+        "description": "Quick but effective ab workout for visible results",
+        "exercises": [
+            {
+                "name": "Plank Hold",
+                "reps": "60 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Maintain straight body position, engage entire core"
+            },
+            {
+                "name": "Side Plank",
+                "reps": "30 sec each side",
+                "sets": 2,
+                "rest": 30,
+                "instructions": "Balance on one forearm and side of foot, keep hips elevated"
+            },
+            {
+                "name": "Flutter Kicks",
+                "reps": "40 sec",
+                "sets": 3,
+                "rest": 20,
+                "instructions": "Lie on back, alternate kicking legs up and down"
+            },
+            {
+                "name": "V-Ups",
+                "reps": "12",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Lie flat, simultaneously raise legs and torso to form V shape"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Quick Cardio Blast",
+        "category": "Full Body",
+        "duration": 15,
+        "calories": 180,
+        "difficulty": "Beginner",
+        "image": "⚡",
+        "description": "Fast-paced cardio to get your heart pumping",
+        "exercises": [
+            {
+                "name": "High Knees",
+                "reps": "45 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Run in place, bring knees up to waist height"
+            },
+            {
+                "name": "Burpees",
+                "reps": "10",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Squat, jump back to plank, push-up, jump forward, jump up"
+            },
+            {
+                "name": "Jumping Jacks",
+                "reps": "40",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Classic jumping jack movement"
+            },
+            {
+                "name": "Butt Kicks",
+                "reps": "45 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Run in place, kick heels up to touch glutes"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Chest Builder",
+        "category": "Chest & Arms",
+        "duration": 20,
+        "calories": 170,
+        "difficulty": "Intermediate",
+        "image": "💪",
+        "description": "Focus on chest development and upper body strength",
+        "exercises": [
+            {
+                "name": "Wide Push-ups",
+                "reps": "15",
+                "sets": 4,
+                "rest": 45,
+                "instructions": "Hands wider than shoulders, focus on chest stretch"
+            },
+            {
+                "name": "Decline Push-ups",
+                "reps": "12",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Feet elevated on chair or bench, increases difficulty"
+            },
+            {
+                "name": "Chest Dips",
+                "reps": "10",
+                "sets": 3,
+                "rest": 45,
+                "instructions": "Lean forward during dips to target chest"
+            },
+            {
+                "name": "Push-up Hold",
+                "reps": "30 sec",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Hold at bottom of push-up position"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Flexibility & Stretch",
+        "category": "Yoga",
+        "duration": 15,
+        "calories": 80,
+        "difficulty": "Beginner",
+        "image": "🧘",
+        "description": "Improve flexibility and reduce muscle tension",
+        "exercises": [
+            {
+                "name": "Hamstring Stretch",
+                "reps": "45 sec each leg",
+                "sets": 2,
+                "rest": 15,
+                "instructions": "Sit with one leg extended, reach toward toes"
+            },
+            {
+                "name": "Hip Flexor Stretch",
+                "reps": "30 sec each side",
+                "sets": 2,
+                "rest": 15,
+                "instructions": "Lunge position, push hips forward gently"
+            },
+            {
+                "name": "Shoulder Stretch",
+                "reps": "30 sec each arm",
+                "sets": 2,
+                "rest": 10,
+                "instructions": "Pull arm across chest, hold with other arm"
+            },
+            {
+                "name": "Spinal Twist",
+                "reps": "30 sec each side",
+                "sets": 2,
+                "rest": 15,
+                "instructions": "Seated, twist torso to one side, hold"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Leg Toning",
+        "category": "Legs",
+        "duration": 25,
+        "calories": 220,
+        "difficulty": "Intermediate",
+        "image": "🦵",
+        "description": "Sculpt and tone your legs with targeted exercises",
+        "exercises": [
+            {
+                "name": "Side Lunges",
+                "reps": "12 each side",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Step to side, bend knee, keep other leg straight"
+            },
+            {
+                "name": "Single Leg Deadlift",
+                "reps": "10 each leg",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Balance on one leg, hinge at hip, reach down"
+            },
+            {
+                "name": "Sumo Squats",
+                "reps": "20",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "Wide stance, toes pointed out, squat down"
+            },
+            {
+                "name": "Donkey Kicks",
+                "reps": "15 each leg",
+                "sets": 3,
+                "rest": 30,
+                "instructions": "On hands and knees, kick leg back and up"
+            }
+        ]
+    }
+]
