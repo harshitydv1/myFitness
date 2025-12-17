@@ -372,9 +372,3 @@ const {
 - **Developer**: Harshit
 - **GitHub**: [@harshitydv1](https://github.com/harshitydv1)
 - **Repository**: [MyFitness](https://github.com/harshitydv1/myFitness)
-
----
-
-**Built with ❤️ and lots of ☕ using React Native & Expo**
-
-> "Pain is temporary, but pride is forever." - Jason Smith
