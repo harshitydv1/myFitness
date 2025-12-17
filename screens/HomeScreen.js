@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
 import { Ionicons } from "@expo/vector-icons";
+import { useFocusEffect } from "@react-navigation/native";
 import { useProfile } from "../hooks/useProfile";
 import { useWorkoutHistory } from "../hooks/useWorkoutHistory";
 import { useWaterTracker } from "../hooks/useWaterTracker";
@@ -25,11 +26,19 @@ import { getGreeting } from "../utils/calculations";
 
 const HomeScreen = ({ navigation }) => {
   const { profile } = useProfile();
-  const { getStats } = useWorkoutHistory();
-  const { waterIntake, dailyGoal } = useWaterTracker();
+  const { getStats, reload: reloadWorkouts } = useWorkoutHistory();
+  const { waterIntake, dailyGoal, reload: reloadWater } = useWaterTracker();
 
   const stats = getStats();
   const greeting = getGreeting();
+
+  // Reload data when screen comes into focus
+  useFocusEffect(
+    React.useCallback(() => {
+      reloadWorkouts();
+      reloadWater();
+    }, [])
+  );
 
   const quickActions = [
     {
@@ -83,12 +92,18 @@ const HomeScreen = ({ navigation }) => {
           <Text style={styles.progressTitle}>Today's Progress</Text>
           <View style={styles.progressStats}>
             <View style={styles.progressStat}>
-              <Text style={styles.progressValue}>{stats.totalWorkouts}</Text>
-              <Text style={styles.progressLabel}>Total Workouts</Text>
+              <Text style={styles.progressValue}>{stats.todayWorkouts}</Text>
+              <Text style={styles.progressLabel}>Workouts Today</Text>
             </View>
             <View style={styles.divider} />
             <View style={styles.progressStat}>
-              <Text style={styles.progressValue}>{waterIntake}ml</Text>
+              <Text
+                style={styles.progressValue}
+                numberOfLines={1}
+                adjustsFontSizeToFit
+              >
+                {waterIntake}ml
+              </Text>
               <Text style={styles.progressLabel}>Water</Text>
             </View>
             <View style={styles.divider} />
